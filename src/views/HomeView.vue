@@ -208,7 +208,7 @@ export default {
       fd.append('temperature', this.input.temperature)
       fd.append('ph', this.input.pH)
       fd.append('ps_data', this.input.current)
-      await axios.post(BASE_URL + "predict/", fd)
+      await axios.post(BASE_URL + "predict", fd)
       .then(res => {
         if (res.status === 200) {
           this.$toast.success('Prediction Successful!', {position: 'top-right', duration: 4000});
