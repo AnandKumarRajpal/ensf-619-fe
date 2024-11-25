@@ -182,7 +182,7 @@
 import vueJsonToCsv from 'vue-json-to-csv';
 import axios from 'axios'
 
-var BASE_URL = "http://127.0.0.1:8000/"
+var BASE_URL = "http://168.138.94.153/"
 
 export default {
   name: "Home",
@@ -204,7 +204,6 @@ export default {
   },
   methods: {
     async submitInput() {
-      console.log(this.input)
       var fd = new FormData()
       fd.append('temperature', this.input.temperature)
       fd.append('ph', this.input.pH)
@@ -222,7 +221,13 @@ export default {
           this.$toast.error(res.response.data.detail, {position: 'top-right', duration: 4000});
         }
       }).catch(err => {
-        this.$toast.error(err.response.data.detail, {position: 'top-right', duration: 4000});
+        var message = ""
+        if (err.response) {
+          message = err.response.data.detail
+        } else {
+          message = err.message
+        }
+        this.$toast.error(message, {position: 'top-right', duration: 4000});
       })
     }
   },
