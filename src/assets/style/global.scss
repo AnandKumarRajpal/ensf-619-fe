@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$body-font-family: 'Montserrat';
+
+.v-application {
+    font-family: $body-font-family, sans-serif !important;
+    .title {
+        font-family: $body-font-family, sans-serif !important;
+    }
+    .headline {
+        font-family: $body-font-family, sans-serif !important;
+    } 
+    .v-btn__content {
+        font-family: $body-font-family, sans-serif !important;
+    }
+ }
+ .v-toast__text {
+    font-family: $body-font-family !important;
+ }
