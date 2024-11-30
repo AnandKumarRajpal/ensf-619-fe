@@ -6,10 +6,8 @@
 
     <v-main>
       <v-container fluid>
-        <!-- If using vue-router -->
         <router-view></router-view>
       </v-container>
-      <!-- <router-view /> -->
     </v-main>
 
     <v-footer padless app absolute color="#f2e2ce" class="mt-7">
